@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  gatitobook:
+    image: sistema-ems
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8081:80
