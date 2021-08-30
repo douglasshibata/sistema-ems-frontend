@@ -7,9 +7,9 @@ const routes: Routes = [
         path: '',
         component: LayoutComponent,
         children: [
-            { path: '', redirectTo: 'dashboard', pathMatch: 'prefix' },
+            { path: '', redirectTo: 'ems', pathMatch: 'prefix' },
             {
-                path: 'dashboard',
+                path: 'ems',
                 loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule)
             },
             { path: 'charts', loadChildren: () => import('./charts/charts.module').then((m) => m.ChartsModule) },
@@ -24,10 +24,6 @@ const routes: Routes = [
                 path: 'components',
                 loadChildren: () => import('./bs-component/bs-component.module').then((m) => m.BsComponentModule)
             },
-            {
-                path: 'blank-page',
-                loadChildren: () => import('./blank-page/blank-page.module').then((m) => m.BlankPageModule)
-            }
         ]
     }
 ];
@@ -36,4 +32,4 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class LayoutRoutingModule {}
+export class LayoutRoutingModule { }
