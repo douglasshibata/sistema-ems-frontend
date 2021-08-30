@@ -99,6 +99,9 @@
                     <i class="fa fa-language"></i> {{ 'Language' | translate }} <b class="caret"></b>
                 </a>
                 <div class="dropdown-menu-right" ngbDropdownMenu>
+                    <a (click)="changeLang('pt-br')" class="dropdown-item" href="javascript:void(0)">
+                        {{ 'Português' | translate }}
+                    </a>
                     <a (click)="changeLang('en')" class="dropdown-item" href="javascript:void(0)">
                         {{ 'English' | translate }}
                     </a>
