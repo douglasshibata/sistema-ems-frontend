@@ -36,5 +36,10 @@
     "Password": "Password",
     "Repeat Password": "Repeat Password",
     "Register": "Register",
-    "Log in": "Log in"
+    "Log in": "Log in",
+    "Professional":"Professional",
+    "News":"News",
+    "About":"About",
+    "Contact":"Contact",
+    "Admin":"Admin"
 }

@@ -36,5 +36,10 @@
     "Password": "Senha",
     "Repeat Password": "Repita a senha",
     "Register": "Cadastrar",
-    "Log in": "Entrar"
+    "Log in": "Entrar",    
+    "Professional":"Profissional",
+    "News":"Novidades",
+    "About":"Sobre",
+    "Contact":"Contatos",
+    "Admin":"Admin"
 }
