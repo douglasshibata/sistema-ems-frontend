@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  gatitobook:
+  ems:
     image: sistema-ems
     build:
       context: .
