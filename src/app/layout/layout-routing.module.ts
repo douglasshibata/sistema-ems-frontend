@@ -12,6 +12,10 @@ const routes: Routes = [
                 path: 'ems',
                 loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule)
             },
+            {
+                path: 'professional',
+                loadChildren: () => import('./professional/professional.module').then((m) => m.ProfessionalModule)
+            }
         ]
     }
 ];
