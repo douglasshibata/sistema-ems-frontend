@@ -9,4 +9,4 @@ RUN npm run build
 
 FROM nginx:alpine
 VOLUME /var/cache/nginx
-COPY --from=angular app/dist/sistema-ems /usr/share/nginx/html
+COPY --from=angular app/dist/ /usr/share/nginx/html
