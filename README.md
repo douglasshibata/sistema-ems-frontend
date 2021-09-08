@@ -5,8 +5,8 @@
 * Angular versão 11
 * Bootstrap versão 4
 * Docker
-* (Font awsome)[https://fontawesome.com/v4.7/examples/]
-* (NG-Bootstrap)[https://ng-bootstrap.github.io/#/home]
+* [Font awsome](https://fontawesome.com/v4.7/examples/)
+* [NG-Bootstrap](https://ng-bootstrap.github.io/#/home)
 ### Objetivo
 
 O projeto foi desenvolvido para auxiliar na busca de profissionais e divulgação de trabalhos dos mesmss.
