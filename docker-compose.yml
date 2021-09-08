@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   ems:
-    image: sistema-ems
+    image: ems
     build:
       context: .
       dockerfile: ./Dockerfile
