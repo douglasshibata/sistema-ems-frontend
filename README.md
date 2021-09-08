@@ -13,19 +13,19 @@ O projeto foi desenvolvido para auxiliar na busca de profissionais e divulgaçã
 
 ### Run project 
 
-    If you don't have the dependencies installed, please use the follow command
+* If you don't have the dependencies installed, please use the follow command
 ```bash
     npm install
 ```
-    if you already install the dependencies, please check if you have angular/cli 
+*  if you already install the dependencies, please check if you have angular/cli 
 ```bash
 ng --version
 ```
-    if no, please install the @angular/cli, use the command below
+*  if no, please install the @angular/cli, use the command below
 ```bash
 npm i -g @angular/cli
 ```
-    if yes, please run the project
+* if yes, please run the project
 ```bash
 ng serve
 ```
