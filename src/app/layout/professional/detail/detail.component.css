@@ -1,0 +1,15 @@
+.jumbotron {
+  background-color: rgba(235, 244, 240, 1);
+}
+.rectangular {
+  width: 264px;
+  height: 264px;
+
+  background: #348c6c;
+  transform: rotate(-45deg);
+}
+.inside-retangular {
+  transform: rotate(45deg);
+  width: 186.68px;
+  margin: 10px 19px;
+}

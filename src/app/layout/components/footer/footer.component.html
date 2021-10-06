@@ -11,16 +11,21 @@
             <div class="col-md-6 mt-md-0 mt-3">
 
                 <!-- Content -->
-                <h3>{{"Social Media"| uppercase | translate}}</h3>
-                <p>Texto.</p>
-                <div class="row">
-                    <div class="col-md-2"><i class="fa fa-whatsapp fa-3x" aria-hidden="true"></i> </div>
-                    <div class="col-md-2"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i> </div>
-                    <div class="col-md-2"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-md-2"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
-                    </div>
+
+                <h3>{{"Social Media"| translate | uppercase}}</h3>
+                <div class="d-flex">
+
+                    <a href="https://api.whatsapp.com/send?phone=5561996423080" class="fa fa-whatsapp fa-lg mx-1"
+                        target="_blank"></a>
+                    <a href="https://www.instagram.com/anandharma_terapias/" class="fa fa-instagram fa-lg mx-1"
+                        target="_blank"></a>
+                    <a href="https://www.youtube.com/channel/UCnkPwENdjF3XbYMA1pA-YnA/" class="fa fa-youtube fa-lg mx-1"
+                        target="_blank"></a>
                 </div>
+                <p>Brasília – DF,<br /> QMSW 05 lote 10, ao lado da maternidade de Brasília –<br /> Bairro: Setor
+                    Sudoeste, Brasília-DF, CEP:
+                    70680500.</p>
+
             </div>
             <!-- Grid column -->
 
@@ -34,16 +39,26 @@
 
                 <ul class="list-unstyled">
                     <li>
-                        <a class="text-success" href="javascript:void(0)" [routerLink]="['about']">Link 1</a>
+                        <a class="text-primary" href="javascript:void(0)" [routerLink]="['']">{{"Home" |
+                            translate | uppercase}}</a>
                     </li>
                     <li>
-                        <a class="text-success" href="javascript:void(0)" [routerLink]="['about']">Link 2</a>
+                        <a class="text-primary" href="javascript:void(0)" [routerLink]="['/']" fragment='about'>{{"About" |
+                            translate | uppercase}}</a>
                     </li>
                     <li>
-                        <a class="text-success" href="javascript:void(0)" [routerLink]="['about']">Link 3</a>
+                        <a class="text-primary" href="javascript:void(0)"
+                            [routerLink]="['/']" fragment='professional'>{{"Professionals" |
+                            translate | uppercase}}</a>
                     </li>
                     <li>
-                        <a class="text-success" href="javascript:void(0)" [routerLink]="['about']">Link 4</a>
+                        <a class="text-primary" href="javascript:void(0)"
+                            [routerLink]="['/']" fragment='partner'>{{"Become our Partner" |
+                            translate | uppercase}}</a>
+                    </li>
+                    <li>
+                        <a class="text-primary" href="javascript:void(0)" [routerLink]="['news']">{{"News" |
+                            translate | uppercase}}</a>
                     </li>
                 </ul>
 
@@ -60,18 +75,12 @@
                     <li>
                         <h4>
                             <i class="fa fa-phone fa-lg"></i>
-                            Telefone
+                            {{"Phone"| translate | uppercase}}
                         </h4>
-                        <span href="javascript:void(0)">+55 (61) 12323</span>
+                        <a href="https://api.whatsapp.com/send?phone=5561996423080" target="_blank">{{phone |
+                            mask: '(00) 00000-0000'}}</a>
                     </li>
                     <br />
-                    <li>
-                        <h4>
-                            <i class="fa fa-envelope fa-lg"></i>
-                            Email
-                        </h4>
-                        <span href="javascript:void(0)">Email@gmail.com</span>
-                    </li>
                 </ul>
 
             </div>
@@ -84,7 +93,21 @@
     <!-- Footer Links -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">&copy; {{year}} - {{"Version"|translate}} {{version}}
+    <div class="footer-copyright text-center py-3">
+        <p class="mt-3">
+            Anandharma Terapias Alternativas CPNJ: 4100898400134 &copy; Todos os direitos reservados
+        </p>
+        &copy; {{year}} - {{"Version"|translate}} {{version}} -
+        Desenvolvido por
+        &nbsp;
+        <a class="fa fa-linkedin"
+            href="https://br.linkedin.com/in/douglas-shibata-546603180?trk=public_profile_recommendations/"
+            target="_blank">
+            &nbsp;
+            Douglas</a>
+        &nbsp; &
+        <a class="fa fa-linkedin" href="https://www.linkedin.com/in/marcosallysson/" target="_blank"> &nbsp;
+            Marcos Allysson</a>
     </div>
     <!-- Copyright -->
 

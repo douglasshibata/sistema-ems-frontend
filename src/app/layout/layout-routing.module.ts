@@ -13,8 +13,20 @@ const routes: Routes = [
                 loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule)
             },
             {
-                path: 'professional',
+                path: 'professional/:id',
                 loadChildren: () => import('./professional/professional.module').then((m) => m.ProfessionalModule)
+            },
+            {
+                path: 'about',
+                loadChildren: () => import('./about/about.module').then((m) => m.AboutModule)
+            },
+            {
+                path: 'news',
+                loadChildren: () => import('./news/news.module').then((m) => m.NewsModule)
+            },
+            {
+                path: 'become-our-partner',
+                loadChildren: () => import('./contact/contact.module').then((m) => m.ContactModule)
             }
         ]
     }

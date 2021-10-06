@@ -1,4 +1,4 @@
-$topnav-background-color: rgb(189, 27, 27);
+$topnav-background-color:#FFF;
 :host {
     .navbar {
         background-color: $topnav-background-color;
@@ -8,40 +8,13 @@ $topnav-background-color: rgb(189, 27, 27);
         }
 
         .nav-item > a {
-            color: #999;
+            color: #565656;
 
             &:hover {
-                color: #fff;
+                color: #322c2c;
             }
         }
+       
     }
-
-    .messages {
-        width: 300px;
-
-        .media {
-            border-bottom: 1px solid #ddd;
-            padding: 5px 10px;
-
-            &:last-child {
-                border-bottom: none;
-            }
-        }
-
-        .media-body {
-            h5 {
-                font-size: 13px;
-                font-weight: 600;
-            }
-
-            .small {
-                margin: 0;
-            }
-
-            .last {
-                font-size: 12px;
-                margin: 0;
-            }
-        }
-    }
+  
 }

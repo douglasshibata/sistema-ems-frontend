@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-    production: false
+    production: false,
+    apiUrl: `${window.location.protocol}//${window.location.hostname}:8000/api/v1/`,
+    djangoUrl: `${window.location.protocol}//${window.location.hostname}:8000/`,
 };
 
 /*

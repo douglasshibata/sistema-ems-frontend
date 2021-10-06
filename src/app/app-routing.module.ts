@@ -8,12 +8,6 @@ const routes: Routes = [
         loadChildren: () => import('./layout/layout.module').then((m) => m.LayoutModule),
         // canActivate: [AuthGuard]
     },
-  /*   { path: 'login', loadChildren: () => import('./login/login.module').then((m) => m.LoginModule) },
-    { path: 'signup', loadChildren: () => import('./signup/signup.module').then((m) => m.SignupModule) }, */
-    {
-        path: 'error',
-        loadChildren: () => import('./server-error/server-error.module').then((m) => m.ServerErrorModule)
-    },
     {
         path: 'access-denied',
         loadChildren: () => import('./access-denied/access-denied.module').then((m) => m.AccessDeniedModule)
@@ -23,7 +17,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy', useHash: true })],
+    imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled', useHash: false })],
     exports: [RouterModule]
 })
 export class AppRoutingModule { }

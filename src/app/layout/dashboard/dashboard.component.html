@@ -1,38 +1,40 @@
 <div [@routerTransition]>
-    <div class="row">
-        <div class="col-md-12">
-            <ngb-carousel>
-                <ng-template *ngFor="let slider of sliders" ngbSlide>
-                    <img [src]="slider.imagePath" alt="Random first slide" class="img-fluid mx-auto d-block"
-                        width="100%" />
-                    <div class="carousel-caption">
-                        <h3>{{ slider.label }}</h3>
-                        <p>{{ slider.text }}</p>
-                    </div>
-                </ng-template>
-            </ngb-carousel>
+    <div class="row container">
+        <div class="col-md-6">
+            <div class="text-left container m-4">
+                <h2 class="text-left font-weight-bold display-3">Bem-vindo à
+                    Equipe Multiprofissional!!</h2>
+                <p class="display-5">Aqui você encontra fisioterapeutas, massoterapeutas, personal trainners,
+                    psicólogos, nutricionistas, instrutores de pilates a sua disposição em conjunto ou individual.</p>
+                <p class="text-left h5"><a href="https://api.whatsapp.com/send?phone=5561996423080" target="_blank"
+                        class="text-muted text-left">Entre em contato.</a></p>
+                <div class="text-left">
+                    <button class="btn btn-success btn-lg text-center m-4" [routerLink]='["/"]'
+                        fragment='professional'>Nossos
+                        Profissionais <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="../../../assets/images/imagem-inicial.svg" alt="">
         </div>
     </div>
-    <hr />
-    <div class="row">
-        <div class="col-xl-3 col-lg-6">
-            <app-stat [bgClass]="'primary'" [count]="26" [icon]="'fa-comments'" [label]="'New Comments!'"></app-stat>
+    <app-list-professional id='professional'></app-list-professional>
+    <app-list-news id='news'></app-list-news>
+    <app-about id='about'></app-about>
+    <div class="p-2 bg-ems mt-4 row">
+        <div class="col">
+            <img class="img-fluid" src="../../../assets/images/bg-gray.svg" alt="Card image">
         </div>
-        <div class="col-xl-3 col-lg-6">
-            <app-stat [bgClass]="'warning'" [count]="12" [icon]="'fa-tasks'" [label]="'New task!'"></app-stat>
-        </div>
-        <div class="col-xl-3 col-lg-6">
-            <app-stat [bgClass]="'success'" [count]="124" [icon]="'fa-shopping-cart'" [label]="'New Orders!'">
-            </app-stat>
-        </div>
-        <div class="col-xl-3 col-lg-6">
-            <app-stat [bgClass]="'danger'" [count]="13" [icon]="'fa-support'" [label]="'New Tickets!'"></app-stat>
+        <div class="container col">
+            <p class="h1 mt-4 display-4 font-weight-bold" style="font-size: 36px;">{{"Become our Partner" | translate}}
+            </p>
+            <p class="mt-3 text ">Amplie suas oportunidades e nos ajude a construir um
+                portal completo e essencial no mundo da tecnologia de multiprofissionais.
+            </p>
+            <a href="https://api.whatsapp.com/send?phone=5561996423080" class='btn btn-success btn-lg '
+                target="_blank">Quero ser parceiro</a>
         </div>
     </div>
-    <hr />
-    <ngb-alert (close)="closeAlert(alert)" *ngFor="let alert of alerts" [type]="alert.type">{{
-        alert.message
-        }}</ngb-alert>
-    <hr />
-  
 </div>

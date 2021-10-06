@@ -1,0 +1,52 @@
+<div class="container-fluid search">
+  <h2 class="font-weight-bold m-3 display-3">
+    {{"News" | translate}}
+  </h2>
+  <p class="text-break text-justify m-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, quos nemo ut
+    cumque, accusantium sapiente adipisci dolorem ducimus cum ipsam natus sunt libero omnis eius nulla atque,
+    reiciendis officiis rerum!</p>
+
+
+  <!--  [ngClass]='{"news":noticia.category==="news","information":noticia.category==="information","entertainment":noticia.category == "entertainment","projects":noticia.category === "projects","health":noticia.category==="health","sponsors":noticia.category==="sponsors","offers":noticia.category==="offers" }' -->
+  <!--   <div class="container bootstrap snippets bootdeys">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 content-card"
+        *ngFor='let noticia of news |slice:((paginator.pageIndex)*paginator.pageSize):((paginator.pageIndex+1)*paginator.pageSize)'>
+        <a href="javascript:void(0)" (click)='goToDetailNews(noticia.id)'>
+          <div class="card-big-shadow">
+            <div class="card card-just-text blue"             
+              data-background="color" data-radius="none">
+              <div class="content">
+                <h6 class="category">{{noticia.category | uppercase}}</h6>
+                <h4 class="title">{{noticia.title}}</h4>
+                <p class="description">{{noticia.sub_title}} </p>
+              </div>
+            </div> 
+          </div>
+        </a>
+      </div>
+    </div>
+  </div> -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 card" style="width: 18rem;"
+        *ngFor='let noticia of news |slice:((paginator.pageIndex)*paginator.pageSize):((paginator.pageIndex+1)*paginator.pageSize)'>
+        <img class="card-img-top img-thumbnail" src="../../../../assets/images/bg-gray.svg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{noticia.title}}</h5>
+          <h6 class="card-subtitle mb-2 font-weight-bold">{{noticia.sub_title}}</h6>
+          <p class="card-text" [innertHtml]='noticia.body | slice: 2:5'></p>
+
+          <a class="card-link" href="javascript:void(0)" (click)='goToDetailNews(noticia.id)'>
+            Ver mais
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <mat-paginator #paginator [length]="pageLength" [pageSize]="pageSize" [pageSizeOptions]="[6, 12, 24,36]"
+    (page)="pageEvent = $event">
+  </mat-paginator>
+</div>

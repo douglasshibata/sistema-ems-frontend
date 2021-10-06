@@ -1,0 +1,55 @@
+<div [@routerTransition]>
+    <div class="search mt-4">
+        <div class="container">
+            <div class="intro">
+                <h3 class="font-weight-bold text-center mt-4">Escolha o profissional mais indicado para você com base na
+                    sua
+                    especialidade, localidade ou recomendação.</h3>
+            </div>
+            <form class="form-inline row">
+                <div class="form-group">
+                    <input class="mx-2 px-1 custom form-control" type="text" [(ngModel)]="selectedName"
+                        placeholder='Nome do profissional' [ngModelOptions]="{standalone: true}" />
+
+
+                </div>
+                <div class="form-group">
+                    <ng-select class="mx-2 px-1 custom" [(ngModel)]="address" [ngModelOptions]="{standalone: true}"
+                        placeholder='Localidade'>
+                        <ng-option *ngFor="let city of cities" [value]="city">
+                            {{city}}</ng-option>
+                    </ng-select>
+                </div>
+                <div class="form-group">
+                    <ng-select class="mx-2 px-1 custom" [(ngModel)]="speciality" [ngModelOptions]="{standalone: true}"
+                        placeholder='especialidade'>
+                        <ng-option *ngFor="let speciality of specialities" [value]="speciality">
+                            {{speciality}}</ng-option>
+                    </ng-select>
+                </div>
+
+                <div class="form-group"><button class="btn btn-primary fa fa-search btn-sm p-2" type="button"
+                        (click)='buscar()'></button></div>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row p-1">
+            <div class="image col-lg-4 col-md-4 col-sm-6 col-xs-12"
+                *ngFor='let professional of professionals |slice:((paginator.pageIndex)*paginator.pageSize):((paginator.pageIndex+1)*paginator.pageSize)'>
+                <a (click)='goToDetailProfessional(professional.id)'>
+                    <img class="image__img" src="{{professional.professional_photo}}" alt="Profile pic">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">{{professional.name}}</div>
+                        <p class="image__description">
+                            {{professional.speciality | titlecase}}
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <mat-paginator #paginator [length]="pageLength" [pageSize]="pageSize" [pageSizeOptions]="[6, 12, 24,36]"
+            (page)="pageEvent = $event">
+        </mat-paginator>
+    </div>
+</div>

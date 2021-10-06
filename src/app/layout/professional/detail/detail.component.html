@@ -1,2 +1,35 @@
-<p>detail works!</p>
-{{id}}
+<div [@routerTransition] *ngIf='professional'>
+    <div class="jumbotron  jumbotron-fluid">
+        <div class="row container-fluid">
+            <div class="col-sm-12 col-md-6">
+                <div class="rectangular container">
+                    <div class="inside-retangular">
+                        <img class="img-thumbnail img-fluid rounded mx-auto d-block"
+                            src="{{professional.professional_photo}}"
+                            alt="imagem do professional">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="my-4 py-4 text-center">
+                    <p class="h2 font-weight-bold text-break">{{professional.name}}</p>
+                    <p class="h4  text-break">{{professional.speciality}}</p>
+                    <p class="h4  text-break">{{professional.license}}</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-1 p-4">
+        <div class="col-md-6 col-sm-12 container">
+            <p class="h3 font-weight-bold text-left">{{"About" |translate}}</p>
+            <p class="text-break">{{professional.description}}</p>
+        </div>
+        <div class="col-md-6 col-sm-12 container">
+            <p class="h3 font-weight-bold text-left">{{"Information" |translate}}</p>
+            <p class="h6 text-left" *ngFor='let phone of professional.contact'><i class="fa fa-phone"></i> &nbsp;{{phone.contact | mask: '(00) 00000-0000'}}</p>
+            <p class="h6 text-left" ><i class="fa fa-envelope"></i> &nbsp;{{professional.email}}</p>
+
+        </div>
+    </div>
+</div>

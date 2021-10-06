@@ -4,9 +4,57 @@
 @import 'utils';
 @import 'rtl';
 @import 'responsive';
+@import "~@ng-select/ng-select/themes/default.theme.css";
 
 @media print {
     .breadcrumb {
         display: none !important;
     }
 }
+.btn-success{
+    background-color: #348C6C;
+}
+.search {
+    background-color:rgba(235, 244, 240, 1);
+    padding: 20px;
+  }
+  
+  .search .intro {
+    font-size: 18px;
+    margin: 0 auto 35px;
+    margin-top: auto;
+  }
+  
+  .search form {
+    justify-content: center;
+  }
+  
+  
+  .search form .btn {
+    padding: 16px 32px;
+    border: none;
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    opacity: 0.9;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    line-height: 1;
+  }
+  
+  .search form .btn:hover {
+    opacity: 1;
+  }
+  
+  .search form .btn:active {
+    transform: translateY(1px);
+  }
+  
+  .search form button {
+    background-color: #2e744b !important;
+    color: #fff;
+    outline: none !important;
+  }
+  

@@ -1,0 +1,9 @@
+<div [@routerTransition] *ngIf='news'>
+    <div class="jumbotron jumbotron-fluid text-center">
+        <p class="text-center display-4 font-weight-bold ">{{news.title |titlecase}}</p>
+        <h2 class="text-cernter">{{news.sub_title}}</h2>
+    </div>
+    <div class="mt-1 p-4" [innerHtml]='news.body'>
+    
+    </div>
+</div>
