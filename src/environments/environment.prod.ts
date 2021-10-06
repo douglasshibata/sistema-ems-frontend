@@ -1,5 +1,5 @@
 export const environment = {
     production: true,
-    apiUrl: `${window.location.protocol}//${window.location.hostname}:8000/api/v1/`,
-    djangoUrl: `${window.location.protocol}//${window.location.hostname}:8000/`,
+    apiUrl: `https://system-ems-api.herokuapp.com/api/v1/`,
+    djangoUrl: `https://system-ems-api.herokuapp.com/`,
 };
